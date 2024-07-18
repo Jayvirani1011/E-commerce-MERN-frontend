@@ -112,7 +112,7 @@ export default function ProductList() {
   return (
     <div>
       <div>
-        <div className="bg-white">
+        <div>
           <div>
             {/* Mobile filter dialog */}
             <Dialog open={mobileFiltersOpen} onClose={setMobileFiltersOpen} className="relative z-40 lg:hidden">
