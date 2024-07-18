@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
 const user = {
     name: 'Tom Cook',
@@ -57,13 +58,15 @@ export default function NavBar({ children }) {
                             <div className="hidden md:block">
                                 <div className="ml-4 flex items-center md:ml-6">
                                     <div className="relative">
-                                        <button
-                                            type="button"
-                                            className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                        >
+                                        <Link to="/cart">
+                                            <button
+                                                type="button"
+                                                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                            >
 
-                                            <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
-                                        </button>
+                                                <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                                            </button>
+                                        </Link>
                                         <span className="absolute top-0 right-0 inline-flex items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs font-medium text-white transform translate-x-1/2 -translate-y-1/2">
                                             3
                                         </span>
@@ -135,12 +138,15 @@ export default function NavBar({ children }) {
                                     <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
                                 </div>
                                 <div className="relative">
-                                    <button
-                                        type="button"
-                                        className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                    >
-                                        <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
-                                    </button>
+                                    <Link to="/cart">
+                                        <button
+                                            type="button"
+                                            className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                        >
+
+                                            <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+                                        </button>
+                                    </Link>
                                     <span className="absolute top-0 right-0 inline-flex items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs font-medium text-white transform translate-x-1/2 -translate-y-1/2">
                                         3
                                     </span>
